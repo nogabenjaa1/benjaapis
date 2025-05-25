@@ -3,11 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeStyle = document.getElementById('theme-style');
     const currentTheme = localStorage.getItem('theme') || 'light';
 
-    // Aplicar tema guardado
     function applyTheme(theme) {
         const root = document.documentElement;
 
-        // Aplicar variables directamente en vez de cambiar el CSS externo
         root.style.setProperty('--bg-color', theme === 'dark' ? '#121212' : '#f5f7fa');
         root.style.setProperty('--text-color', theme === 'dark' ? '#e0e0e0' : '#333');
         root.style.setProperty('--primary-color', theme === 'dark' ? '#6c8eff' : '#4a6cf7');
@@ -29,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
         applyTheme(newTheme);
     });
 
-    // Inicializar
     applyTheme(currentTheme);
 });
 

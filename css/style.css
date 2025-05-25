@@ -1,4 +1,4 @@
-/***** Variables y temas - Versión Lila Pastel Unificado *****/
+/***** Variables y temas - Versión Lila *****/
 :root {
     /* Base pastel */
     --bg-color: #faf7ff;
@@ -73,7 +73,7 @@ body {
     padding: 2rem;
 }
 
-/***** Header con gradiente lila *****/
+/***** Header con gradiente *****/
 .header {
     text-align: center;
     margin-bottom: 2rem;
@@ -149,7 +149,7 @@ body {
     color: var(--primary-light);
 }
 
-/***** Buscador Mejorado - Estilo Cristal *****/
+/***** Buscador - Estilo Cristal *****/
 .search-container {
     position: relative;
     margin-bottom: 1.5rem;
@@ -249,7 +249,7 @@ body {
     }
 }
 
-/***** Tabla de APIs con efecto vidrio *****/
+/***** Tabla de APIs *****/
 .api-table {
     background: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
@@ -320,7 +320,7 @@ body {
     font-size: 0.9rem;
 }
 
-/***** Botones Verticales - Solo Lilas *****/
+/***** Botones Verticales *****/
 .col-actions {
     width: 80px;
     display: flex;
@@ -346,14 +346,14 @@ body {
     box-shadow: var(--shadow);
 }
 
-/* Botón Preview (más intenso) */
+/* Botón Preview */
 .btn.view-code {
     background: var(--primary-medium);
     color: white;
     border: 1px solid var(--primary-dark);
 }
 
-/* Botón Download (más suave) */
+/* Botón Download */
 .btn.download {
     background: var(--primary-ultralight);
     color: var(--primary-dark);

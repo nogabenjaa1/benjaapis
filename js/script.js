@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const closePreview = document.getElementById('close-preview');
     let allApis = [];
 
-    // 🌐 Cargar APIs desde JSON
+    // Cargar APIs
     async function loadApis() {
         try {
             const response = await fetch('apis/data.json');
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    // 🎨 Renderizar APIs
+    // Renderizar APIs
     function renderApis(filteredApis = allApis) {
         apiList.innerHTML = '';
 
@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                 </div>
             `;
 
-            // 📄 Agregar listener al botón de preview
             const previewBtn = apiItem.querySelector('.view-code');
             previewBtn.addEventListener('click', async () => {
                 try {
@@ -68,7 +67,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    // 🔍 Búsqueda
+    // Búsqueda
     function handleSearch() {
         const searchTerm = searchInput.value.trim().toLowerCase();
         searchResults.innerHTML = '';
@@ -107,7 +106,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    // ✨ Resaltar API
     function highlightApi(apiName) {
         const apiElements = document.querySelectorAll('.api-item');
         apiElements.forEach(item => {
@@ -121,23 +119,19 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    // Cerrar modal de preview
     closePreview.addEventListener('click', () => {
         previewModal.classList.add('hidden');
         previewContent.textContent = '';
     });
 
-    // 🏁 Inicializar
     await loadApis();
 
-    // 🌙 Tema
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
     themeToggle.innerHTML = savedTheme === 'dark'
         ? '<i class="fas fa-sun"></i>'
         : '<i class="fas fa-moon"></i>';
 
-    // Eventos
     searchInput.addEventListener('input', handleSearch);
     document.addEventListener('click', (e) => {
         if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
