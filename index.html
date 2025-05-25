@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BenjaAPIs</title>
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tus estilos -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Tema Claro-->
+    <link id="theme-style" rel="stylesheet" href="css/light-theme.css">
+    <script src="js/theme-toggle.js" defer></script>
+    <script src="js/script.js" defer></script>
+
+</head>
+
+<div id="preview-modal" class="modal hidden">
+    <div class="modal-content">
+        <button id="close-preview" class="close-btn"><i class="fas fa-times"></i></button>
+        <pre id="preview-content">Cargando...</pre>
+    </div>
+</div>
+
+<body>
+    <div class="container">
+        <!-- Header con delimitador -->
+        <header class="header">
+            <div class="title-wrapper">
+                <span class="delimiter">//</span>
+                <h1>BenjaAPIs</h1>
+            </div>
+            <p class="subtitle">
+                Made by <a href="https://t.me/benjaaa1" target="_blank"><i class="fab fa-telegram"></i>
+                    t.me/benjaaa1</a>
+            </p>
+            <!-- Toggle tema -->
+            <button id="theme-toggle" class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </header>
+
+        <!-- Buscador -->
+        <div class="search-container">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search-input" placeholder="Buscar API...">
+            </div>
+            <div id="search-results" class="search-results"></div>
+        </div>
+
+        <!-- Tabla de APIs (dinámica) -->
+        <div class="api-table">
+            <div class="api-table-header">
+                <div class="col-name">Nombre</div>
+                <div class="col-desc">Descripción</div>
+                <div class="col-actions">Acciones</div>
+            </div>
+            <div id="api-list"></div> <!-- Aquí se insertarán las APIs dinámicamente -->
+        </div>
+    </div>
+</body>
+
+</html>

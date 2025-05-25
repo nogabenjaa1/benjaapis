@@ -1,0 +1,15 @@
+:root {
+    --bg-color: #f5f7fa;
+    --text-color: #333;
+    --primary-color: #4a6cf7;
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --border-color: rgba(0, 0, 0, 0.08);
+    --header-bg: rgba(255, 255, 255, 0.9);
+    --icon-color: #555;
+    --transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+/* Animación de transición entre temas */
+body {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}

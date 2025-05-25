@@ -1,0 +1,8 @@
+[
+    {
+        "name": "API name",
+        "desc": "Api desc",
+        "icon": "fas fa-credit-card",
+        "file": "apiname.py"
+    }
+]
